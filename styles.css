@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Karla:wght@400;700&display=swap");
+
+/* font-family: 'DM Serif Display', serif; headings */
+/* font-family: 'Karla', sans-serif; body */
+
 * {
 	box-sizing: border-box;
 }
@@ -6,6 +11,7 @@ html,
 body {
 	margin: 0px;
 	height: 100%;
+	font-family: "Karla", sans-serif;
 }
 
 .flex {
@@ -51,4 +57,56 @@ nav {
 
 .mobile-nav-menu {
 	position: absolute;
+	width: 100%;
+	border: 1px solid black;
+	height: 90vh;
+	right: 0%;
+	top: 60px;
+	background-color: hsl(270, 9%, 17%);
+	background-image: url("./images/bg-pattern-mobile-nav.svg");
+	background-repeat: no-repeat;
+	background-position: bottom;
+	padding-left: 0px;
+	margin-top: 0px;
+	list-style: none;
+	flex-direction: column;
+	align-items: center;
+	font-size: 1.2rem;
+	padding-top: 10px;
+	color: hsl(0, 0%, 98%);
+	display: none;
+	animation: fadeIn 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.active {
+	display: flex;
+}
+
+.mobile-nav-menu li {
+	margin: 20px;
+	padding: 10px;
+	width: 90%;
+	text-align: center;
+}
+
+.mobile-nav-menu li:hover {
+	border: 1px solid hsl(0, 0%, 98%);
+}
+
+@media (min-width: 768px) {
+}
+
+@media (min-width: 1200px) {
+	.mobile-nav-menu {
+		display: none;
+	}
 }
